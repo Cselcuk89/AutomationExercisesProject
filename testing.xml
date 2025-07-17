@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AutomationExercise">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+    <test name="AutomationExercise">
+        <packages>
+            <package name="org.selcuk.tests"/>
+        </packages>
+    </test>
+</suite>
