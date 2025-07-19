@@ -3,24 +3,25 @@ package org.selcuk.pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class CheckoutPage {
-    @FindBy(xpath = "//ul[contains(@id, 'address_delivery')]//li")
+    @FindBy(how = How.XPATH, using = "//ul[contains(@id, 'address_delivery')]//li")
     private List<WebElement> addressDelivery;
-    @FindBy(xpath = "//ul[contains(@id, 'address_invoice')]//li")
+    @FindBy(how = How.XPATH, using = "//ul[contains(@id, 'address_invoice')]//li")
     private List<WebElement> addressInvoice;
 
-    @FindBy(xpath = "//section/div/div[5]/table/tbody/tr[3]/td[4]/p")
+    @FindBy(how = How.XPATH, using = "//section/div/div[5]/table/tbody/tr[3]/td[4]/p")
     private WebElement totalAmount;
 
-    @FindBy(css = "textarea[name='message']")
+    @FindBy(how = How.CSS, using = "textarea[name='message']")
     private WebElement comment;
 
-    @FindBy(css = "a[href='/payment']")
+    @FindBy(how = How.CSS, using = "a[href='/payment']")
     private WebElement placeOrderButton;
 
     private WebDriver driver;

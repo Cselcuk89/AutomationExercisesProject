@@ -3,9 +3,10 @@ package org.selcuk.pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.selcuk.base.TestBase;
+import org.selcuk.testCases.base.TestBase;
 import org.selcuk.helpers.DateTimeHelper;
 import org.selcuk.helpers.JsonReadHelper;
 
@@ -13,61 +14,61 @@ import java.io.IOException;
 import java.text.ParseException;
 
 public class EnterAccountInformationPage extends TestBase {
-    @FindBy(xpath = "//b[contains(.,'Enter Account Information')]")
+    @FindBy(how = How.XPATH, using = "//b[contains(.,'Enter Account Information')]")
     private WebElement enterAccountInformation;
 
-    @FindBy(id = "id_gender1")
+    @FindBy(how = How.ID, using = "id_gender1")
     private WebElement titleMrCheckbox;
 
-    @FindBy(id = "password")
+    @FindBy(how = How.ID, using = "password")
     private WebElement passwordInput;
 
-    @FindBy(id = "days")
+    @FindBy(how = How.ID, using = "days")
     private WebElement daysSelect;
 
-    @FindBy(id = "months")
+    @FindBy(how = How.ID, using = "months")
     private WebElement monthsSelect;
 
-    @FindBy(id = "years")
+    @FindBy(how = How.ID, using = "years")
     private WebElement yearsSelect;
 
-    @FindBy(id = "newsletter")
+    @FindBy(how = How.ID, using = "newsletter")
     private WebElement newsletterCheckbox;
 
-    @FindBy(id = "optin")
+    @FindBy(how = How.ID, using = "optin")
     private WebElement specialOffersCheckbox;
 
-    @FindBy(id = "first_name")
+    @FindBy(how = How.ID, using = "first_name")
     private WebElement firstNameInput;
 
-    @FindBy(id = "last_name")
+    @FindBy(how = How.ID, using = "last_name")
     private WebElement lastNameInput;
 
-    @FindBy(id = "company")
+    @FindBy(how = How.ID, using = "company")
     private WebElement companyInput;
 
-    @FindBy(id = "address1")
+    @FindBy(how = How.ID, using = "address1")
     private WebElement address1Input;
 
-    @FindBy(id = "address2")
+    @FindBy(how = How.ID, using = "address2")
     private WebElement address2Input;
 
-    @FindBy(id = "country")
+    @FindBy(how = How.ID, using = "country")
     private WebElement countrySelect;
 
-    @FindBy(id = "state")
+    @FindBy(how = How.ID, using = "state")
     private WebElement stateInput;
 
-    @FindBy(id = "city")
+    @FindBy(how = How.ID, using = "city")
     private WebElement cityInput;
 
-    @FindBy(id = "zipcode")
+    @FindBy(how = How.ID, using = "zipcode")
     private WebElement zipcodeInput;
 
-    @FindBy(id = "mobile_number")
+    @FindBy(how = How.ID, using = "mobile_number")
     private WebElement mobileNumberInput;
 
-    @FindBy(css = "button[data-qa='create-account']")
+    @FindBy(how = How.CSS, using = "button[data-qa='create-account']")
     private WebElement createAccountButton;
 
     private WebDriver driver;

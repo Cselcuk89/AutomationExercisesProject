@@ -4,34 +4,35 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class ContactUsPage {
-    @FindBy(css = "h2.title:nth-child(2)")
+    @FindBy(how = How.CSS, using = "h2.title:nth-child(2)")
     private WebElement getInTouch;
 
-    @FindBy(name = "name")
+    @FindBy(how = How.NAME, using = "name")
     private WebElement nameInput;
 
-    @FindBy(name = "email")
+    @FindBy(how = How.NAME, using = "email")
     private WebElement emailInput;
 
-    @FindBy(name = "subject")
+    @FindBy(how = How.NAME, using = "subject")
     private WebElement subjectInput;
 
-    @FindBy(id = "message")
+    @FindBy(how = How.ID, using = "message")
     private WebElement messageInput;
 
-    @FindBy(name = "upload_file")
+    @FindBy(how = How.NAME, using = "upload_file")
     private WebElement uploadFileInput;
 
-    @FindBy(name = "submit")
+    @FindBy(how = How.NAME, using = "submit")
     private WebElement submitButton;
 
-    @FindBy(css = ".status.alert.alert-success")
+    @FindBy(how = How.CSS, using = ".status.alert.alert-success")
     private WebElement alertSuccess;
 
-    @FindBy(xpath = "//a[@class='btn btn-success']")
+    @FindBy(how = How.XPATH, using = "//a[@class='btn btn-success']")
     private WebElement homePageButton;
 
     private WebDriver driver;
