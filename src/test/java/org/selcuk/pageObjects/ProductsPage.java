@@ -3,6 +3,7 @@ package org.selcuk.pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.selcuk.helpers.WaitHelper;
 
@@ -10,49 +11,49 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ProductsPage {
-    @FindBy(css = ".title.text-center")
+    @FindBy(how = How.CSS, using = ".title.text-center")
     private WebElement titleTextCenter;
 
-    @FindBy(css = "a[href='/product_details/1']")
+    @FindBy(how = How.CSS, using = "a[href='/product_details/1']")
     private WebElement viewProductOfFirstProductButton;
 
-    @FindBy(id = "search_product")
+    @FindBy(how = How.ID, using = "search_product")
     private WebElement searchProductInput;
 
-    @FindBy(id = "submit_search")
+    @FindBy(how = How.ID, using = "submit_search")
     private WebElement submitSearchInput;
 
-    @FindBy(xpath = "//div[contains(@class, 'productinfo text-center')]//p")
+    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'productinfo text-center')]//p")
     private List<WebElement> searchResultsNames;
 
-    @FindBy(css = "a[data-product-id='1']")
+    @FindBy(how = How.CSS, using = "a[data-product-id='1']")
     private WebElement addToCartButton1;
 
-    @FindBy(css = "a[data-product-id='2']")
+    @FindBy(how = How.CSS, using = "a[data-product-id='2']")
     private WebElement addToCartButton2;
 
-    @FindBy(css = "button[data-dismiss='modal']")
+    @FindBy(how = How.CSS, using = "button[data-dismiss='modal']")
     private WebElement continueShoppingButton;
 
-    @FindBy(css = "a[href='/view_cart'] u")
+    @FindBy(how = How.CSS, using = "a[href='/view_cart'] u")
     private WebElement viewCartButton;
 
-    @FindBy(css = "a[href='#Men']")
+    @FindBy(how = How.CSS, using = "a[href='#Men']")
     private WebElement menCategory;
 
-    @FindBy(css = "a[href='/category_products/3']")
+    @FindBy(how = How.CSS, using = "a[href='/category_products/3']")
     private WebElement tShirtsCategory;
 
-    @FindBy(css = "div[class='brands-name']")
+    @FindBy(how = How.CSS, using = "div[class='brands-name']")
     private WebElement brands;
 
-    @FindBy(css = "a[href='/brand_products/Polo']")
+    @FindBy(how = How.CSS, using = "a[href='/brand_products/Polo']")
     private WebElement poloBrand;
 
-    @FindBy(css = "a[href='/brand_products/Madame']")
+    @FindBy(how = How.CSS, using = "a[href='/brand_products/Madame']")
     private WebElement madameBrand;
 
-    @FindBy(css = "a[class='btn btn-default add-to-cart']")
+    @FindBy(how = How.CSS, using = "a[class='btn btn-default add-to-cart']")
     List<WebElement> addButtons;
 
     private WebDriver driver;

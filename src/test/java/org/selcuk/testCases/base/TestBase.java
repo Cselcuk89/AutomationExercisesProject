@@ -1,4 +1,4 @@
-package org.selcuk.base;
+package org.selcuk.testCases.base;
 
 import org.openqa.selenium.WebDriver;
 import org.selcuk.helpers.BrowserHelper;

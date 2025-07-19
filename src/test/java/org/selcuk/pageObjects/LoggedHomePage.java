@@ -3,16 +3,17 @@ package org.selcuk.pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoggedHomePage {
-    @FindBy(xpath = "//*[@id='header']/div/div/div/div[2]/div/ul/li[10]/a/b")
+    @FindBy(how = How.XPATH, using = "//*[@id='header']/div/div/div/div[2]/div/ul/li[10]/a/b")
     private WebElement username;
 
-    @FindBy(xpath = "//header/div/div/div/div[2]/div/ul/li[5]/a")
+    @FindBy(how = How.XPATH, using = "//header/div/div/div/div[2]/div/ul/li[5]/a")
     private WebElement deleteAccountButton;
 
-    @FindBy(xpath = "//header/div/div/div/div[2]/div/ul/li[4]/a")
+    @FindBy(how = How.XPATH, using = "//header/div/div/div/div[2]/div/ul/li[4]/a")
     private WebElement logoutButton;
 
     private WebDriver driver;

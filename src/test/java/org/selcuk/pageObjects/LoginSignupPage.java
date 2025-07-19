@@ -3,42 +3,43 @@ package org.selcuk.pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.selcuk.base.TestBase;
+import org.selcuk.testCases.base.TestBase;
 import org.selcuk.helpers.JsonReadHelper;
 
 import java.io.IOException;
 import java.text.ParseException;
 
 public class LoginSignupPage extends TestBase {
-    @FindBy(css = "div[class='login-form'] h2")
+    @FindBy(how = How.CSS, using = "div[class='login-form'] h2")
     private WebElement loginToYourAccount;
 
-    @FindBy(css = "input[data-qa='login-email']")
+    @FindBy(how = How.CSS, using = "input[data-qa='login-email']")
     private WebElement loginEmailInput;
 
-    @FindBy(css = "input[data-qa='login-password']")
+    @FindBy(how = How.CSS, using = "input[data-qa='login-password']")
     private WebElement loginPasswordInput;
 
-    @FindBy(css = "button[data-qa='login-button']")
+    @FindBy(how = How.CSS, using = "button[data-qa='login-button']")
     private WebElement loginButton;
 
-    @FindBy(xpath = "/html/body/section/div/div/div[1]/div/form/p")
+    @FindBy(how = How.XPATH, using = "/html/body/section/div/div/div[1]/div/form/p")
     private WebElement errorLogin;
 
-    @FindBy(css = "div[class='signup-form'] h2")
+    @FindBy(how = How.CSS, using = "div[class='signup-form'] h2")
     private WebElement newUserSignup;
 
-    @FindBy(css = "input[data-qa='signup-name']")
+    @FindBy(how = How.CSS, using = "input[data-qa='signup-name']")
     private WebElement signupNameInput;
 
-    @FindBy(css = "input[data-qa='signup-email']")
+    @FindBy(how = How.CSS, using = "input[data-qa='signup-email']")
     private WebElement signupEmailInput;
 
-    @FindBy(css = "button[data-qa='signup-button']")
+    @FindBy(how = How.CSS, using = "button[data-qa='signup-button']")
     private WebElement signupButton;
 
-    @FindBy(xpath = "//section/div/div/div[3]/div/form/p")
+    @FindBy(how = How.XPATH, using = "//section/div/div/div[3]/div/form/p")
     private WebElement emailAddressAlreadyExist;
 
     private WebDriver driver;

@@ -3,6 +3,7 @@ package org.selcuk.pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.selcuk.helpers.WaitHelper;
 
@@ -11,37 +12,37 @@ import java.util.stream.Collectors;
 
 public class CartPage {
 
-    @FindBy(xpath = "//td[contains(@class, 'cart_description')]//a")
+    @FindBy(how = How.XPATH, using = "//td[contains(@class, 'cart_description')]//a")
     private List<WebElement> productName;
 
-    @FindBy(xpath = "//td[contains(@class, 'cart_price')]/p")
+    @FindBy(how = How.XPATH, using = "//td[contains(@class, 'cart_price')]/p")
     private List<WebElement> price;
 
-    @FindBy(xpath = "//td[contains(@class, 'cart_quantity')]/button")
+    @FindBy(how = How.XPATH, using = "//td[contains(@class, 'cart_quantity')]/button")
     private List<WebElement> quantity;
 
-    @FindBy(xpath = "//p[contains(@class, 'cart_total_price')]")
+    @FindBy(how = How.XPATH, using = "//p[contains(@class, 'cart_total_price')]")
     private List<WebElement> totalPrice;
 
-    @FindBy(css = "li[class='active']")
+    @FindBy(how = How.CSS, using = "li[class='active']")
     private WebElement shoppingCart;
 
-    @FindBy(css = "a[class='btn btn-default check_out']")
+    @FindBy(how = How.CSS, using = "a[class='btn btn-default check_out']")
     private WebElement proceedToCheckoutButton;
 
-    @FindBy(css = "a[href='/login'] u")
+    @FindBy(how = How.CSS, using = "a[href='/login'] u")
     private WebElement registerLoginButton;
 
-    @FindBy(css = "a[data-product-id='1']")
+    @FindBy(how = How.CSS, using = "a[data-product-id='1']")
     private WebElement xButton1;
 
-    @FindBy(css = "a[data-product-id='2']")
+    @FindBy(how = How.CSS, using = "a[data-product-id='2']")
     private WebElement xButton2;
 
-    @FindBy(id = "empty_cart")
+    @FindBy(how = How.ID, using = "empty_cart")
     private WebElement emptyCartSpan;
 
-    @FindBy(css = "a[class='cart_quantity_delete']")
+    @FindBy(how = How.CSS, using = "a[class='cart_quantity_delete']")
     private List<WebElement> xButtons;
 
     private WebDriver driver;
