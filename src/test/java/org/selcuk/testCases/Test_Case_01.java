@@ -13,8 +13,8 @@ import java.text.ParseException;
 @Epic("Regression Tests")
 @Feature("User")
 public class Test_Case_01 extends TestBase {
-    String name = "name" + DateTimeHelper.generateCurrentDateAndTime();
-    String email = "email" + DateTimeHelper.generateCurrentDateAndTime() + "@o2.pl";
+    static String name = "name" + DateTimeHelper.generateCurrentDateAndTime();
+    static String email = "email" + DateTimeHelper.generateCurrentDateAndTime() + "@o2.pl";
     @Test(description = "Test Case 1 : Register User")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Register User")
@@ -62,6 +62,7 @@ public class Test_Case_01 extends TestBase {
                 .getNewUserSignup()
                 .getText();
         Assert.assertEquals(newUserSignupText, "New User Signup!", "Verify 'New User Signup!' is visible");
+
     }
 
     @Step("Verify that 'ENTER ACCOUNT INFORMATION' is visible")
